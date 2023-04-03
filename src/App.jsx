@@ -7,13 +7,14 @@ import styles from "./App.module.css";
 
 import "./global.css";
 
+
 const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: "https://github.com/matheusr1406.png",
-      name: "Matheus Rocha",
-      role: "Web Developer",
+      avatarUrl: "https://github.com/diego3g.png",
+      name: "Diego Fernandes",
+      role: "Ceo RocketSeat",
     },
     content: [
       { type: "paragraph", content: "Fala galeraa 👋" },
@@ -29,9 +30,9 @@ const posts = [
   {
     id: 2,
     author: {
-      avatarUrl: "https://github.com/diego3g.png",
-      name: "Diego Fernandes",
-      role: "Ceo RocketSeat",
+      avatarUrl: "https://github.com/matheusr1406.png",
+      name: "Matheus Rocha",
+      role: "Web Developer",
     },
     content: [
       { type: "paragraph", content: "Fala galeraa 👋" },
@@ -56,6 +57,7 @@ export function App() {
           {posts.map((post) => {
             return (
             <Posts
+              key={post.id}
               author={post.author}
               content={post.content}
             />)
